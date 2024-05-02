@@ -43,7 +43,7 @@ async def process_youtube_link(client, message):
 
         # Download the YouTube video
         yt = YouTube(youtube_link)
-        video = yt.streams.filter(progressive=True, file_extension='mp4' , quality=1080).first()
+        video = yt.streams.filter(progressive=True, file_extension='mp4' , quality="1080").first()
         video.download(filename='downloaded_video.mp4')
 
         # Uploading text message
